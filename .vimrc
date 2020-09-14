@@ -8,6 +8,7 @@ set autoindent
 set smartindent
 set cindent
 
+set ttymouse=xterm2  " solve vim mouse cannot work in tmux.
 set mouse=a
 set nu
 
@@ -52,13 +53,18 @@ Plugin 'OmniCppComplete'
 
 Plugin 'ervandew/supertab'
 
-Plugin 'Lokaltog/vim-powerline'
+" Plugin 'Lokaltog/vim-powerline'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_symbols = 'fancy'
+" vim-airline configurations
+" let g:airline#extensions#tabline#enabled = 1
